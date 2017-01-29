@@ -22,4 +22,14 @@ Create one R script called run_analysis.R that does the following.
    Train and test sets were transformed that 2 columns(subject, activity) and variables(features) were added
    to each data set.
    
-2. 
+2. To extract only the measurements on the mean and standard deviation for each measurement. "grep" function
+   was used to know which column contained word "mean" or "std".
+   
+3. Activity names were not descriptive(activity names were numeric). so I split the data set into 6 activities
+   with "filter" function and then the numerics(1 ~ 6) were replaced by real activity names("walking" etc)
+   
+4. But variables of the mereged data set was not still descriptive so they needed to be transformed.
+   "gsub" function was used to make variables descriptive
+   
+5. Lastly, merged data set was grouped by "subject" and "activity" and summarised. then variales were gathered
+   into "measurements" to make a tidy data set
